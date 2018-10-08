@@ -4,7 +4,7 @@
 //  YLWeiXinAppDylib.h
 //  YLWeiXinAppDylib
 //
-//  Created by wuyonglin on 2018/9/17.
+//  Created by wuyonglin on 2018/9/26.
 //  Copyright (c) 2018年 IceCreamWu. All rights reserved.
 //
 

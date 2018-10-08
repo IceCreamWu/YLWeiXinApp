@@ -28,6 +28,7 @@
 		A06668A0214F428C0027A1A8 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = A066689F214F428C0027A1A8 /* fishhook.h */; };
 		A06668A2214F428C0027A1A8 /* YLWeiXinAppDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = A06668A1214F428C0027A1A8 /* YLWeiXinAppDylib.h */; };
 		A06668A4214F428C0027A1A8 /* YLWeiXinAppDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = A06668A3214F428C0027A1A8 /* YLWeiXinAppDylib.m */; };
+		A0EEF33A215B85DE00551E7A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0EEF339215B85DE00551E7A /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		A066689F214F428C0027A1A8 /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fishhook.h; path = fishhook/fishhook.h; sourceTree = "<group>"; };
 		A06668A1214F428C0027A1A8 /* YLWeiXinAppDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLWeiXinAppDylib.h; sourceTree = "<group>"; };
 		A06668A3214F428C0027A1A8 /* YLWeiXinAppDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLWeiXinAppDylib.m; sourceTree = "<group>"; };
+		A0EEF339215B85DE00551E7A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		A0666853214F428C0027A1A8 = {
 			isa = PBXGroup;
 			children = (
+				A0EEF339215B85DE00551E7A /* Default-568h@2x.png */,
 				A0666861214F428C0027A1A8 /* YLWeiXinApp */,
 				A066687C214F428C0027A1A8 /* YLWeiXinAppDylib */,
 				A0666875214F428C0027A1A8 /* Frameworks */,
@@ -345,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0666868214F428C0027A1A8 /* MDConfig.plist in Resources */,
+				A0EEF33A215B85DE00551E7A /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

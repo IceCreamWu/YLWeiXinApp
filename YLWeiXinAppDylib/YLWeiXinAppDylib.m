@@ -39,9 +39,11 @@ CHConstructor{
 @property(retain, nonatomic) NSString *username;
 @property(retain, nonatomic) NSString *contentDesc;
 @property(retain, nonatomic) NSMutableArray *likeUsers;
+@property(retain, nonatomic) NSMutableArray *sharedGroupIDs;
 @property(nonatomic) int likeCount;
 
 + (id)fromServerObject:(id)arg1;
+- (BOOL)hasSharedGroup;
 
 @end
 
@@ -150,13 +152,28 @@ CHOptimizedClassMethod1(self, id, WCDataItem, fromServerObject, id, serverObj){
             }
         }
         dataItem.likeCount = (int)dataItem.likeUsers.count;
+        [dataItem.sharedGroupIDs removeAllObjects];
     }
     return dataItem;
+}
+
+CHOptimizedMethod0(self, BOOL, WCDataItem, hasSharedGroup) {
+    // 获取自己的信息
+    id serviceCenter = [NSClassFromString(@"MMServiceCenter") defaultCenter];
+    CContactMgr *contactMgr = [serviceCenter getService:NSClassFromString(@"CContactMgr")];
+    CContact *selfContact = [contactMgr getSelfContact];
+
+    // 是自己发的，就不显示只对某组可见的按钮
+    if ([self.username isEqualToString:selfContact.m_nsUsrName]) {
+        return NO;
+    }
+    return CHSuper0(WCDataItem, hasSharedGroup);
 }
 
 CHConstructor{
     NSLog(@"hook WCDataItem");
     CHLoadLateClass(WCDataItem);
     CHClassHook1(WCDataItem, fromServerObject);
+    CHHook0(WCDataItem, hasSharedGroup);
 }
 
