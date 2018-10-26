@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A01DCA982181DCDB0048A1BA /* YLSettingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A01DCA962181DCDB0048A1BA /* YLSettingViewController.h */; };
+		A01DCA992181DCDB0048A1BA /* YLSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01DCA972181DCDB0048A1BA /* YLSettingViewController.m */; };
+		A01DCA9C2181FF780048A1BA /* YLConfigCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A01DCA9A2181FF780048A1BA /* YLConfigCenter.h */; };
+		A01DCA9D2181FF780048A1BA /* YLConfigCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A01DCA9B2181FF780048A1BA /* YLConfigCenter.m */; };
+		A01DCAA021820A4E0048A1BA /* YLHookStep.m in Sources */ = {isa = PBXBuildFile; fileRef = A01DCA9F21820A4E0048A1BA /* YLHookStep.m */; };
 		A03EC86B2181580E00970C0C /* YLWeiXinApp.h in Headers */ = {isa = PBXBuildFile; fileRef = A03EC86A2181580E00970C0C /* YLWeiXinApp.h */; };
 		A03EC86E2181583400970C0C /* YLHookLike.m in Sources */ = {isa = PBXBuildFile; fileRef = A03EC86D2181583400970C0C /* YLHookLike.m */; };
+		A03EC87121816C7400970C0C /* YLHookMore.m in Sources */ = {isa = PBXBuildFile; fileRef = A03EC87021816C7400970C0C /* YLHookMore.m */; };
 		A0666868214F428C0027A1A8 /* MDConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0666867214F428C0027A1A8 /* MDConfig.plist */; };
 		A0666872214F428C0027A1A8 /* libYLWeiXinAppDylib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0666871214F428C0027A1A8 /* libYLWeiXinAppDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A0666877214F428C0027A1A8 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0666876214F428C0027A1A8 /* JavaScriptCore.framework */; };
@@ -57,8 +63,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A01DCA962181DCDB0048A1BA /* YLSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLSettingViewController.h; sourceTree = "<group>"; };
+		A01DCA972181DCDB0048A1BA /* YLSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLSettingViewController.m; sourceTree = "<group>"; };
+		A01DCA9A2181FF780048A1BA /* YLConfigCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLConfigCenter.h; sourceTree = "<group>"; };
+		A01DCA9B2181FF780048A1BA /* YLConfigCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLConfigCenter.m; sourceTree = "<group>"; };
+		A01DCA9F21820A4E0048A1BA /* YLHookStep.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLHookStep.m; sourceTree = "<group>"; };
+		A01DCAA121820CAC0048A1BA /* YLGlobalDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLGlobalDefine.h; sourceTree = "<group>"; };
 		A03EC86A2181580E00970C0C /* YLWeiXinApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLWeiXinApp.h; sourceTree = "<group>"; };
 		A03EC86D2181583400970C0C /* YLHookLike.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLHookLike.m; sourceTree = "<group>"; };
+		A03EC87021816C7400970C0C /* YLHookMore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLHookMore.m; sourceTree = "<group>"; };
 		A066685F214F428C0027A1A8 /* YLWeiXinApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLWeiXinApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0666862214F428C0027A1A8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		A0666863214F428C0027A1A8 /* Target.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Target.plist; sourceTree = "<group>"; };
@@ -112,11 +125,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A01DCA9E21820A340048A1BA /* YLHookStep */ = {
+			isa = PBXGroup;
+			children = (
+				A01DCA9F21820A4E0048A1BA /* YLHookStep.m */,
+			);
+			path = YLHookStep;
+			sourceTree = "<group>";
+		};
 		A03EC865218154D900970C0C /* Src */ = {
 			isa = PBXGroup;
 			children = (
 				A03EC86A2181580E00970C0C /* YLWeiXinApp.h */,
+				A01DCAA121820CAC0048A1BA /* YLGlobalDefine.h */,
+				A01DCA9A2181FF780048A1BA /* YLConfigCenter.h */,
+				A01DCA9B2181FF780048A1BA /* YLConfigCenter.m */,
 				A03EC86C2181581B00970C0C /* YLHookLike */,
+				A01DCA9E21820A340048A1BA /* YLHookStep */,
+				A03EC86F21816C4500970C0C /* YLHookMore */,
 			);
 			path = Src;
 			sourceTree = "<group>";
@@ -127,6 +153,16 @@
 				A03EC86D2181583400970C0C /* YLHookLike.m */,
 			);
 			path = YLHookLike;
+			sourceTree = "<group>";
+		};
+		A03EC86F21816C4500970C0C /* YLHookMore */ = {
+			isa = PBXGroup;
+			children = (
+				A03EC87021816C7400970C0C /* YLHookMore.m */,
+				A01DCA962181DCDB0048A1BA /* YLSettingViewController.h */,
+				A01DCA972181DCDB0048A1BA /* YLSettingViewController.m */,
+			);
+			path = YLHookMore;
 			sourceTree = "<group>";
 		};
 		A0666853214F428C0027A1A8 = {
@@ -277,6 +313,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A01DCA9C2181FF780048A1BA /* YLConfigCenter.h in Headers */,
+				A01DCA982181DCDB0048A1BA /* YLSettingViewController.h in Headers */,
 				A0666887214F428C0027A1A8 /* MDCycriptManager.h in Headers */,
 				A06668A2214F428C0027A1A8 /* YLWeiXinAppDylib.h in Headers */,
 				A066688B214F428C0027A1A8 /* MDMethodTrace.h in Headers */,
@@ -432,10 +470,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0666889214F428C0027A1A8 /* MDCycriptManager.m in Sources */,
+				A01DCA9D2181FF780048A1BA /* YLConfigCenter.m in Sources */,
+				A03EC87121816C7400970C0C /* YLHookMore.m in Sources */,
+				A01DCAA021820A4E0048A1BA /* YLHookStep.m in Sources */,
 				A0666891214F428C0027A1A8 /* ANYMethodLog.m in Sources */,
 				A0666885214F428C0027A1A8 /* MDConfigManager.m in Sources */,
 				A0666896214F428C0027A1A8 /* LLDBTools.mm in Sources */,
 				A03EC86E2181583400970C0C /* YLHookLike.m in Sources */,
+				A01DCA992181DCDB0048A1BA /* YLSettingViewController.m in Sources */,
 				A0666880214F428C0027A1A8 /* YLWeiXinAppDylib.mm in Sources */,
 				A066688D214F428C0027A1A8 /* MDMethodTrace.m in Sources */,
 				A066689E214F428C0027A1A8 /* fishhook.c in Sources */,

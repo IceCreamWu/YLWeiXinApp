@@ -9,13 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <CaptainHook/CaptainHook.h>
 #import "YLWeiXinApp.h"
+#import "YLConfigCenter.h"
 
 CHDeclareClass(WCDataItem)
 
 CHOptimizedClassMethod1(self, id, WCDataItem, fromServerObject, id, serverObj){
-    NSLog(@"hook WCDataItem fromServerObject");
+    NSLog(@"YLHook WCDataItem fromServerObject");
     
     WCDataItem *dataItem = CHSuper1(WCDataItem, fromServerObject, serverObj);
+    
+    // 开关是否开启
+    if (![YLConfigCenter sharedInstance].hookLike) {
+        return dataItem;
+    }
     
     // 获取自己的信息
     id serviceCenter = [NSClassFromString(@"MMServiceCenter") defaultCenter];
@@ -91,6 +97,12 @@ CHOptimizedClassMethod1(self, id, WCDataItem, fromServerObject, id, serverObj){
 }
 
 CHOptimizedMethod0(self, BOOL, WCDataItem, hasSharedGroup) {
+    
+    // 开关是否开启
+    if (![YLConfigCenter sharedInstance].hookLike) {
+        return CHSuper0(WCDataItem, hasSharedGroup);
+    }
+    
     // 获取自己的信息
     id serviceCenter = [NSClassFromString(@"MMServiceCenter") defaultCenter];
     CContactMgr *contactMgr = [serviceCenter getService:NSClassFromString(@"CContactMgr")];
@@ -104,7 +116,7 @@ CHOptimizedMethod0(self, BOOL, WCDataItem, hasSharedGroup) {
 }
 
 CHConstructor{
-    NSLog(@"hook WCDataItem");
+    NSLog(@"YLHook WCDataItem");
     CHLoadLateClass(WCDataItem);
     CHClassHook1(WCDataItem, fromServerObject);
     CHHook0(WCDataItem, hasSharedGroup);
